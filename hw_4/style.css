@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+span {
+    width: 130px;
+    float: left;
+}
+button {
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+    display: inline-block;
+}
+label {
+    display: inline-block;
+}
+.gender {
+    display: inline-block;
+}
+.gender span{
+    margin-right: -70px;
+}
+
