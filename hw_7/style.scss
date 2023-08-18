@@ -1,0 +1,418 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+footer{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    padding: 70px 0;
+    li{
+    margin-top: 15px;
+        a{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px; 
+            text-decoration: unset; 
+        }
+    }
+        h2{
+            color: #2F281E;
+            font-family: Gotham;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; 
+            margin-bottom: 30px;
+        }
+    form{
+       h2{
+        color: #2F281E;
+        font-family: Gotham;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px; 
+       } 
+       input{
+        border-radius: 4px;
+        border: 1px solid #BCD0E5;
+        color: #BCD0E5;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        width: 340px;
+        height: 50px;
+        padding: 0 10px;
+        align-items: center;
+        gap: 10px;
+        margin: 25px 0;
+       }
+       button{
+        display: flex;
+        width: 180px;
+        height: 50px;
+        padding: 13px 40px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background: #F90;
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border: unset;
+       }
+    }
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: 80px;
+    padding: 17px 0;
+    nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    }
+    img{
+        max-width: 200px;
+        width: 100%;
+        max-height: 32px;
+        height: 100%;
+        flex-shrink: 0;   
+    }
+    a:hover{
+        color: #F90;
+    }
+    a{
+        color: #2F281E;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;  
+        text-decoration: unset;
+    }
+    .first-button {
+    color: #2F281E;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    width: 110px;
+    height: 46px;
+    padding: 13px 25px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    }
+    .second-button{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    width: 110px;
+    height: 46px;
+    padding: 13px 25px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #F90;
+    border: 1px solid white;
+    }
+    .buttons{
+        display: flex;
+        gap: 32px;
+    }
+}
+main{
+    .first-screen{  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:1200px;
+    width: 100%;
+    padding-top: 70px;
+        h1{
+        color: #2F281E;
+        font-family: Montserrat;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 54px; 
+        width: 500px;
+        height: 110px;
+        flex-shrink: 0;
+        margin-bottom: 30px;
+        }
+        p{
+        color: #544837;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; 
+        width:500px;
+        height: 91px;
+        flex-shrink: 0; 
+        margin-bottom: 20px;
+        }
+        button{
+        display: flex;
+        width: 180px;
+        height: 50px;
+        padding: 13px 40px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #F90;
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border: 1px solid white;
+        }
+    }
+    .benefits{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 104px;
+        .main-text{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h2{
+        color: #2F281E;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 395px;
+        }
+        h4{
+        color: #2F281E;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px; 
+        margin-top: 30px; 
+        }
+        p{
+        color: #544837;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px; 
+        width: 525px;
+        }
+        span{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px; 
+        }
+    }
+    .marketers{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        padding: 100px 0;
+        .main-text{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        span{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;    
+        }
+        h2{
+            color: #2F281E;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal; 
+            margin-bottom: 20px;   
+        }
+        h4{
+            color: #2F281E;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px; 
+            margin-top: 30px;
+        }
+        p{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px; 
+            width: 486px;
+        }
+    }
+    .managers{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+        .checkbox{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .main-text{
+            margin-bottom: 10px;
+        }
+        span{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px; 
+        } 
+        h2{
+            color: #2F281E;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 20px;
+        }
+        p{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px; 
+            width: 440px;
+        }
+    }
+    .features{
+        background-image: url("img/bg.png");
+        background-size: cover; 
+        background-repeat: no-repeat;
+        .items{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h2{
+            width: 539px;
+            color: #2F281E;
+            text-align: center;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            margin-top: 100px;
+        }
+        h3{
+            color: #2F281E;
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p{
+            color: #544837;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+            width: 270px;
+        }
+        button{
+            display: flex;
+            width: 180px;
+            height: 50px;
+            padding: 13px 40px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: #F90;
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border: 1px solid white;
+            margin: auto; 
+            margin-top: 70px;
+        }
+    }
+    hr{
+        color: #BCD0E57F;
+        width: 100%;
+        height: 1px;
+    }
+}
