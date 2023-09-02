@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+body header .menu {
+  display: flex;
+}
+body header .menu .eng {
+  margin-right: 50px;
+  color: #000000;
+  text-align: center;
+  font-family: Tourney;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.88px;
+  text-decoration: unset;
+  display: flex;
+  align-items: center;
+}
+body header .menu nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+body header .menu nav ul span {
+  color: #000;
+  font-family: Staatliches;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.66px;
+}
+body header .menu nav ul li a {
+  color: #000;
+  font-family: Staatliches;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.66px;
+  text-decoration: unset;
+}
+body main {
+  padding-top: 70px;
+}
+body main .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body main .title .line {
+  width: 100px;
+  height: 8px;
+  background: #000;
+}
+body main .title h2 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  margin: 0;
+}
+body main .items {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 30px;
+}
+body main .items .flip-card {
+  width: 270px;
+  height: 180px;
+  position: relative;
+}
+body main .items .flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+body main .items .flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+body main .items .flip-card-front,
+body main .items .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+body main .items .flip-card-front {
+  background-color: #E6E6E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .items .flip-card-back {
+  background-color: #1A1A1A;
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
