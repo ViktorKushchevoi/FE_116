@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 1px solid #EFEEF3;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    .header-wrapper {
+        display: flex;
+        gap: 13px;
+
+        svg {
+
+            #logo {
+                fill: white;
+                stroke: green;
+            }
+        }
+
+        h2 {
+            color: #16133D;
+            font-family: Quicksand;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 35px;
+        }
+    }
+}
+
+main {
+    .service {
+        padding: 100px 0;
+
+        h3 {
+            color: #7690A8;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #16133D;
+            font-family: Nunito Sans;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 52px;
+            letter-spacing: 0.2px;
+            margin-bottom: 40px;
+
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            .item {
+                width: 370px;
+                height: 340px;
+                padding: 40px;
+                border-radius: 8px;
+                border: 1px solid #E5EAF4;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+
+                &:hover svg {
+                    stroke: #52C29D;
+
+                }
+
+                &:hover {
+                    border: 1px solid #3DB370;
+                }
+
+                svg {
+                    width: 64px;
+                    height: 64px;
+                    padding: 10px;
+                    ;
+                    flex-shrink: 0;
+                    stroke: #007FFC;
+                    border-radius: 16px;
+                    border: 1px solid #E5EAF4;
+
+                }
+
+
+
+                h4 {
+                    color: #16133D;
+                    font-family: Roboto;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 21.28px;
+                    letter-spacing: 0.2px;
+                }
+
+                p {
+                    color: #16133D;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px;
+
+                }
+
+                span {
+                    color: #3DB370;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 193px;
+    display: flex;
+    background: #16133D;
+
+    .footer-wrapper {
+        .title {
+            display: flex;
+            gap: 13px;
+            margin: 40px 0;
+
+            h2 {
+                color: #FFF;
+                font-family: Quicksand;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 35px;
+            }
+
+            svg {
+                #logo {
+                    fill: #16133D;
+                    stroke: green;
+                }
+            }
+        }
+
+        nav {
+            ul {
+                display: flex;
+                gap: 10px;
+
+
+
+                li {
+                    background: #EFEEF3;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover #icon {
+                        fill: #52C29D;
+                    }
+                }
+            }
+        }
+
+    }
+}
