@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header h3 {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 8px;
+}
+
+.first-section,
+.second-section,
+.third-section,
+.fourth-section,
+.fifth-section {
+  padding-bottom: 90px;
+}
+.first-section h1,
+.second-section h1,
+.third-section h1,
+.fourth-section h1,
+.fifth-section h1 {
+  color: #000;
+  font-family: Red Hat Display;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 2.4px;
+  margin-bottom: 70px;
+}
+.first-section h2,
+.second-section h2,
+.third-section h2,
+.fourth-section h2,
+.fifth-section h2 {
+  color: #000;
+  font-family: Red Hat Display;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166%;
+  letter-spacing: 2.8px;
+  margin-bottom: 50px;
+}
+.first-section p,
+.second-section p,
+.third-section p,
+.fourth-section p,
+.fifth-section p {
+  color: #565656;
+  font-family: Lato;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.95px;
+}
+.first-section img,
+.second-section img,
+.third-section img,
+.fourth-section img,
+.fifth-section img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.third-section p,
+.fourth-section p,
+.fifth-section p {
+  margin-top: 20px;
+}
+
+.second-section p {
+  max-width: 570px;
+  width: 100%;
+}
+
+footer {
+  background: #F4F4F4;
+  height: 100%;
+}
+footer .footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+footer .footer-wrapper .leftside h2,
+footer .footer-wrapper .rightside h2 {
+  color: #000;
+  font-family: Red Hat Display;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 2.4px;
+  margin-bottom: 30px;
+}
+footer .footer-wrapper .leftside p,
+footer .footer-wrapper .rightside p {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 1.6px;
+}
+footer .footer-wrapper .leftside {
+  margin-bottom: 25px;
+}
+footer .footer-wrapper .leftside .email {
+  margin-top: 15px;
+}
+footer .footer-wrapper .rightside ul {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+footer .footer-wrapper .rightside ul li {
+  border: 1px solid #565656;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-wrapper .rightside ul li:hover {
+  background-color: #565656;
+}
+footer .footer-wrapper .rightside ul li:hover a {
+  color: white;
+}
+footer .footer-wrapper .rightside ul li a {
+  color: #565656;
+  text-decoration: unset;
+  font-size: 25px;
+}
+footer .rights {
+  text-align: center;
+  padding-bottom: 30px;
+}
+footer p {
+  color: #000;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    padding: 0 34px;
+  }
+  img {
+    height: 380px;
+  }
+  .first-section,
+  .second-section,
+  .third-section,
+  .fourth-section,
+  .fifth-section {
+    padding-bottom: 70px;
+  }
+  .first-section img,
+  .second-section img,
+  .third-section img,
+  .fourth-section img,
+  .fifth-section img {
+    height: 380px;
+  }
+  .first-section h1,
+  .second-section h1,
+  .third-section h1,
+  .fourth-section h1,
+  .fifth-section h1 {
+    margin-bottom: 50px;
+  }
+  footer .footer-wrapper {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  footer .footer-wrapper .leftside {
+    margin-bottom: 0;
+  }
+  footer .footer-wrapper .leftside p {
+    text-align: center;
+  }
+  footer .footer-wrapper .rightside {
+    margin: 40px 0;
+  }
+  footer footer .rights {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  img {
+    height: 300px;
+  }
+  .first-section,
+  .second-section,
+  .third-section,
+  .fourth-section,
+  .fifth-section {
+    padding-bottom: 70px;
+  }
+  .first-section img,
+  .second-section img,
+  .third-section img,
+  .fourth-section img,
+  .fifth-section img {
+    height: 300px;
+  }
+  .first-section h1,
+  .second-section h1,
+  .third-section h1,
+  .fourth-section h1,
+  .fifth-section h1 {
+    margin-bottom: 40px;
+  }
+  .first-section h2,
+  .second-section h2,
+  .third-section h2,
+  .fourth-section h2,
+  .fifth-section h2 {
+    margin-bottom: 40px;
+  }
+  footer .footer-wrapper {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  footer .footer-wrapper .leftside {
+    margin-bottom: 0;
+  }
+  footer .footer-wrapper .leftside h2 {
+    font-size: 32px;
+  }
+  footer .footer-wrapper .leftside p {
+    font-size: 18px;
+  }
+  footer .footer-wrapper .rightside {
+    margin: 40px 0;
+  }
+  footer footer .rights {
+    padding-bottom: 50px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+}
