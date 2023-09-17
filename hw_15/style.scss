@@ -32,9 +32,7 @@ header {
                     display: flex;
                     justify-content: center;
 
-                    &:hover .line,
-                    .line-small,
-                    .line-big {
+                    &:hover .line {
                         opacity: 1;
                     }
 
@@ -66,6 +64,23 @@ header {
         }
 
     }
+
+    .burger-menu {
+        display: none;
+        width: 35px;
+        height: 20px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        span {
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            display: block;
+        }
+    }
+
 }
 
 main {
@@ -99,6 +114,7 @@ main {
     .blog {
         padding-top: 90px;
         padding-bottom: 40px;
+
         h2 {
             color: #000;
             font-family: Red Hat Display;
@@ -154,6 +170,7 @@ main {
                 }
             }
         }
+
         .left {
             justify-items: end;
         }
@@ -366,6 +383,7 @@ main {
             letter-spacing: 0.95px;
         }
     }
+
 }
 
 footer {
@@ -461,15 +479,57 @@ footer {
 }
 
 @media (max-width: 1170px) {
-    body {
+
+    header,
+    .blog,
+    .latest-posts,
+    .popular,
+    .information,
+    footer {
         padding: 0 34px;
     }
 
+    header {
+        &.active {
+            height: auto;
+            padding: 20px 34px;
+        }
+
+        .menu {
+            gap: 40px;
+            align-items: center;
+
+            nav {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                ul {
+                    flex-direction: column;
+                }
+            }
+        }
+
+
+        .burger-menu {
+            display: flex;
+        }
+    }
+
     main {
+        .first-screen {
+            h1 {
+                padding-left: 34px;
+            }
+        }
+
         .latest-posts {
             .posts {
                 grid-template-columns: 1fr;
                 grid-template-rows: auto auto auto;
+
                 .item {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -480,23 +540,27 @@ footer {
                         height: 250px;
                     }
                 }
+
                 .item:nth-child(2) {
                     img {
                         order: 2;
                     }
+
                     .wrapper {
                         order: 1;
                     }
                 }
             }
         }
-    }
-    .information{
-        flex-direction: column;
-        .text{
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 70px;
+
+        .information {
+            flex-direction: column;
+
+            .text {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 70px;
+            }
         }
     }
 
@@ -518,6 +582,91 @@ footer {
 
         .rights {
             padding-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    header,
+    .blog,
+    .latest-posts,
+    .popular,
+    .information,
+    footer {
+        padding: 0 10px;
+    }
+
+    main {
+        .title {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .blog {
+            h2 {
+                text-align: center;
+            }
+
+            .article {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 40px;
+
+                .info {
+                    max-width: 100%;
+                    order: 2;
+
+                    svg {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .latest-posts {
+
+            .posts {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                gap: 50px;
+
+                .item {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 250px;
+                    }
+                }
+
+                .item:nth-child(2) {
+                    img {
+                        order: 2;
+                    }
+
+                    .wrapper {
+                        order: 2;
+                    }
+                }
+            }
+        }
+        .popular{
+            .popular-posts{
+                grid-template-columns: repeat(1, 1fr);
+                gap: 50px;
+            }
+        }
+
+        .information {
+            flex-direction: column;
+
+            .text {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 70px;
+            }
         }
     }
 }
