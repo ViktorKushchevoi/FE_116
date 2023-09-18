@@ -13,20 +13,15 @@
 
 header {
     height: 100px;
-    width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 142px 1fr 40px ;
     align-items: center;
-    justify-content: space-between;
-
     .menu {
         display: flex;
-        gap: 84px;
-
-        nav {
-            ul {
+        justify-content: center;
+        ul {
                 display: flex;
                 gap: 42px;
-
                 li {
                     position: relative;
                     display: flex;
@@ -60,11 +55,7 @@ header {
 
                 }
             }
-
-        }
-
     }
-
     .burger-menu {
         display: none;
         width: 35px;
@@ -80,7 +71,6 @@ header {
             display: block;
         }
     }
-
 }
 
 main {
@@ -511,11 +501,6 @@ footer {
                 }
             }
         }
-
-
-        .burger-menu {
-            display: flex;
-        }
     }
 
     main {
@@ -595,6 +580,28 @@ footer {
     .information,
     footer {
         padding: 0 10px;
+    }
+    header {
+        grid-template-columns: 142px 1fr 40px;
+        grid-template-areas: "logo search burger"
+                             "menu menu menu";
+        .logo {
+            grid-area: logo;
+        }
+        .menu {
+            grid-area: menu;
+            ul {
+                flex-direction: column;
+            }
+        }
+        .search {
+            grid-area: search;
+            justify-self: end;
+        }
+        .burger-menu {
+            grid-area: burger;
+            display: flex;
+        }
     }
 
     main {
