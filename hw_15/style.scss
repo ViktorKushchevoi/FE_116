@@ -14,48 +14,52 @@
 header {
     height: 100px;
     display: grid;
-    grid-template-columns: 142px 1fr 40px ;
+    grid-template-columns: 142px 1fr 40px;
     align-items: center;
+
     .menu {
         display: flex;
         justify-content: center;
+
         ul {
+            display: flex;
+            gap: 42px;
+
+            li {
+                position: relative;
                 display: flex;
-                gap: 42px;
-                li {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
+                justify-content: center;
 
-                    &:hover .line {
-                        opacity: 1;
-                    }
-
-                    .line {
-                        height: 1px;
-                        position: absolute;
-                        top: 22px;
-                        background: #000;
-                        opacity: 0;
-                        width: calc(100% - 10px);
-                        margin-right: 4.2px;
-                    }
-
-                    a {
-                        color: #000;
-                        font-family: Lato;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                        letter-spacing: 4.2px;
-                        text-transform: uppercase;
-                        text-decoration: unset;
-                    }
-
+                &:hover .line {
+                    opacity: 1;
                 }
+
+                .line {
+                    height: 1px;
+                    position: absolute;
+                    top: 22px;
+                    background: #000;
+                    opacity: 0;
+                    width: calc(100% - 10px);
+                    margin-right: 4.2px;
+                }
+
+                a {
+                    color: #000;
+                    font-family: Lato;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 4.2px;
+                    text-transform: uppercase;
+                    text-decoration: unset;
+                }
+
             }
+        }
     }
+
     .burger-menu {
         display: none;
         width: 35px;
@@ -480,27 +484,12 @@ footer {
     }
 
     header {
-        &.active {
-            height: auto;
-            padding: 20px 34px;
-        }
 
         .menu {
             gap: 40px;
             align-items: center;
-
-            nav {
-                display: none;
-
-                &.active {
-                    display: block;
-                }
-
-                ul {
-                    flex-direction: column;
-                }
-            }
         }
+
     }
 
     main {
@@ -581,23 +570,59 @@ footer {
     footer {
         padding: 0 10px;
     }
+
     header {
         grid-template-columns: 142px 1fr 40px;
         grid-template-areas: "logo search burger"
-                             "menu menu menu";
+            "menu menu menu";
+        align-self: center;
+
+        &.active {
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
         .logo {
             grid-area: logo;
         }
+
         .menu {
             grid-area: menu;
-            ul {
-                flex-direction: column;
+            display: none;
+
+
+            &.active {
+                display: block;
+
+                a:hover {
+                    font-weight: 700;
+                }
+
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-top: 20px;
+
+                    li {
+                        &:hover .line {
+                            opacity: 0;
+
+
+                        }
+                    }
+                }
+
             }
         }
+
+
         .search {
             grid-area: search;
             justify-self: end;
+            margin-right: 20px;
         }
+
         .burger-menu {
             grid-area: burger;
             display: flex;
@@ -659,8 +684,9 @@ footer {
                 }
             }
         }
-        .popular{
-            .popular-posts{
+
+        .popular {
+            .popular-posts {
                 grid-template-columns: repeat(1, 1fr);
                 gap: 50px;
             }

@@ -401,22 +401,9 @@ footer p {
   footer {
     padding: 0 34px;
   }
-  header.active {
-    height: auto;
-    padding: 20px 34px;
-  }
   header .menu {
     gap: 40px;
     align-items: center;
-  }
-  header .menu nav {
-    display: none;
-  }
-  header .menu nav.active {
-    display: block;
-  }
-  header .menu nav ul {
-    flex-direction: column;
   }
   main .first-screen h1 {
     padding-left: 34px;
@@ -477,19 +464,38 @@ footer p {
   header {
     grid-template-columns: 142px 1fr 40px;
     grid-template-areas: "logo search burger" "menu menu menu";
+    align-self: center;
+  }
+  header.active {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
   header .logo {
     grid-area: logo;
   }
   header .menu {
     grid-area: menu;
+    display: none;
   }
-  header .menu ul {
+  header .menu.active {
+    display: block;
+  }
+  header .menu.active a:hover {
+    font-weight: 700;
+  }
+  header .menu.active ul {
     flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  header .menu.active ul li:hover .line {
+    opacity: 0;
   }
   header .search {
     grid-area: search;
     justify-self: end;
+    margin-right: 20px;
   }
   header .burger-menu {
     grid-area: burger;
@@ -546,5 +552,3 @@ footer p {
     margin-top: 70px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
