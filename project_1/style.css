@@ -520,6 +520,12 @@ footer p {
   .line {
     display: none;
   }
+  .first-screen .search-form {
+    padding-left: 10px;
+  }
+  .first-screen .search-form input::placeholder {
+    font-size: 13px;
+  }
   .first-screen .scroll {
     transform: scale(1.5);
   }

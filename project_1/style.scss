@@ -169,7 +169,6 @@ header {
             text-transform: uppercase;
         }
 
-
         nav {
             ul {
                 display: flex;
@@ -285,8 +284,6 @@ header {
     align-items: center;
 
     .steps-wrapper {
-
-
         .items {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -608,11 +605,21 @@ footer {
     }
 
     .first-screen {
+        .search-form {
+            padding-left: 10px;
+
+            input {
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
+
+        }
 
         .scroll {
             transform: scale(1.5);
-
         }
+
     }
 
     header {
