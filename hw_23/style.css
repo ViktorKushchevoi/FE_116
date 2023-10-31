@@ -1,0 +1,41 @@
+.items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    border: 2px solid black;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.item {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.red.active {
+    background-color: red;
+}
+
+.yellow.active {
+    background-color: yellow;
+}
+
+.green.active {
+    background-color: green;
+    ;
+}
+
+button {
+    color: white;
+    background-color: black;
+}
+
+.box {
+    margin-top: 50px;
+    border: 2px solid #000;
+    width: 200px;
+    height: 200px;
+}
