@@ -1,0 +1,46 @@
+.movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    .movie {
+        background: #1A1A1A;
+        padding: 20px;
+        border-radius: 12px;
+        transition: background 0.3s ease-in-out; 
+
+        &:hover {
+          background: #333; 
+        }
+        a {
+            text-decoration: unset;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+                transition: transform 0.3s ease-in-out; 
+
+                &:hover {
+                  transform: scale(1.05); 
+                }
+            }
+
+            .movie-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+
+            h2,
+            h5 {
+                color:  #FFF;
+                font-family: Manrope;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+            }
+        }
+    }
+}

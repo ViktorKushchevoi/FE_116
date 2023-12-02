@@ -1,0 +1,62 @@
+.slider {
+    padding-top: 50px;
+
+    .swiper {
+        transition: box-shadow 0.3s ease-in-out;
+        border-radius: 20px;
+
+        &:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+        }
+
+        .swiper-slide {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .swiper-pagination {
+            margin-bottom: 30px;
+
+            .swiper-pagination-bullet {
+                height: 5px;
+                border-radius: 100px;
+                background: black;
+                width: 25px;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: red;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-rtl,
+        .swiper-button-disabled,
+        .swiper-button-prev {
+            border-radius: 8px;
+            border: 1px solid var(--black-12, #1F1F1F);
+            background: var(--black-06, #0F0F0F);
+            color: white;
+            width: 40px;
+            height: 40px;
+            top: 90%;
+
+            &::after {
+                content: '';
+            }
+
+            z-index: 50;
+        }
+
+        .swiper-button-next {
+            background-image: url('../img/button-next.png');
+            background-size: cover;
+        }
+
+        .swiper-button-prev {
+            background-image: url('../img/button-prev.png');
+            background-size: cover;
+        }
+
+    }
+}
