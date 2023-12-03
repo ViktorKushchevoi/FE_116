@@ -5,10 +5,10 @@ function Movies() {
     return (
         <>
             <section className="slider container">
+                <h1>Trending now</h1>
                 <MainSlider />
             </section>
-            <section className='trending container'>
-                <h1>Trending Now</h1>
+            <section className='list container'>
                 <MoviesList />
             </section>
         </>
