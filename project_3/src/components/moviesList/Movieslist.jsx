@@ -3,6 +3,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../assets/scss/_movies_list.scss';
+
 const baseURL = "https://api.themoviedb.org/3";
 const apiKey = "dd365cece93903f23fd8f02821fb9210";
 const allMovies = "/discover/movie";
@@ -14,7 +15,6 @@ function MoviesList() {
   const [search, setSearch] = useState('');
   const [error, setError] = useState(null);
 
-
   function searchMovie(e) {
     e.preventDefault();
     getMovies(search);
@@ -24,6 +24,7 @@ function MoviesList() {
     let url = baseURL + allMovies;
     let params = {
       api_key: apiKey,
+      page: 1
     }
     if (search) {
       url = baseURL + searchMovies;
@@ -46,14 +47,14 @@ function MoviesList() {
 
   useEffect(() => {
     getMovies(search);
-  }, []);
+  }, [search]); 
 
   if (error) {
     return <div className="error">
       <h2>{error}</h2>
     </div>;
   } else if (movies) {
-    const items = movies.slice(0, 8).map((movie, index) => (
+    const items = movies.map((movie, index) => (
       <div key={index} className="movie">
         <Link to={"/movies/" + movie.id} className="link">
           <img src={imgBaseURL + movie.poster_path} alt={movie.title} />
@@ -86,4 +87,5 @@ function MoviesList() {
     )
   }
 }
+
 export default MoviesList;

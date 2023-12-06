@@ -20,7 +20,7 @@ function Footer() {
                     </div>
                     <div className="column">
                         <ul>
-                            <li><NavLink to="/" className="footer-title">Movies</NavLink></li>
+                            <li><NavLink to="/movies" className="footer-title">Movies</NavLink></li>
                             <li><NavLink to="/">Gernes</NavLink></li>
                             <li><NavLink to="/">Trending</NavLink></li>
                             <li><NavLink to="/">Popular</NavLink></li>
@@ -28,15 +28,16 @@ function Footer() {
                     </div>
                     <div className="column">
                         <ul>
-                            <li><NavLink to="/" className="footer-title">Shows</NavLink></li>
-                            <li><NavLink to="/">Gernes</NavLink></li>
-                            <li><NavLink to="/">Trending</NavLink></li>
-                            <li><NavLink to="/">Popular</NavLink></li>
+                            <li><NavLink to="/genres" className="footer-title">Genres</NavLink></li>
+                            <li><NavLink to="/">Comedy</NavLink></li>
+                            <li><NavLink to="/">Adventure</NavLink></li>
+                            <li><NavLink to="/">Horror</NavLink></li>
+                            <li><NavLink to="/">History</NavLink></li>
                         </ul>
                     </div>
                     <div className="column">
                         <ul>
-                            <li><NavLink to="/" className="footer-title">Support</NavLink></li>
+                            <li><NavLink to="/support" className="footer-title">Support</NavLink></li>
                             <li><NavLink to="/">Contact us</NavLink></li>
                         </ul>
                     </div>

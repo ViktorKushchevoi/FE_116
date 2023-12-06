@@ -9,7 +9,6 @@ import Genres from './components/genres/Genres';
 import Support from './components/support/Support';
 import NotFoundPage from './components/notFoundPage/NotFoundPage';
 
-
 function App() {
   return (
     <Routes>

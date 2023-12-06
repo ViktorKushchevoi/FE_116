@@ -1,7 +1,8 @@
 .genres {
     padding: 100px 0;
 
-    h1, h2 {
+    h1,
+    h2 {
         color: #FFF;
         font-family: Manrope;
         font-size: 38px;
@@ -11,8 +12,31 @@
         text-align: center;
         margin-bottom: 50px;
     }
+
     h2 {
-        text-align: left; 
+        text-align: left;
         margin-bottom: 20px;
+    }
+
+    button {
+        display: flex;
+        padding: 18px 24px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: unset;
+        background: #E50000;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        width: 170px;
+        height: 58px;
+
+        &:hover {
+            background: #990000;
+        }
     }
 }

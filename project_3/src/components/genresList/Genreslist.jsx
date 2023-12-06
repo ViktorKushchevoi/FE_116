@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import React from "react";
 import { Link } from "react-router-dom";
 import '../../assets/scss/_genres_list.scss';
 
@@ -10,9 +9,11 @@ const allMovies = "/discover/movie";
 const imgBaseURL = "https://image.tmdb.org/t/p/original";
 
 function GenresList() {
-    const [genres, setGenres] = useState([
+    const [genres] = useState([
+        { id: "12", title: "Adventure Movies" },
         { id: "36", title: "History Movies" },
         { id: "27", title: "Horror Movies" },
+        { id: "35", title: "Comedy Movies" }
     ]);
 
     const [error, setError] = useState(null);
@@ -52,7 +53,7 @@ function GenresList() {
     return (
         <>
             {genres.map((genre) => (
-                <React.Fragment key={genre.id}>
+                <div key={genre.id}>
                     <h2>{genre.title}</h2>
                     <div className="genres-list">
                         {genreMovies[genre.id]?.slice(0, 5).map((movie, index) => (
@@ -63,7 +64,7 @@ function GenresList() {
                             </div>
                         ))}
                     </div>
-                </React.Fragment>
+                </div>
             ))}
         </>
     );
