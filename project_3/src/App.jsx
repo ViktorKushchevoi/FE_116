@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import Movies from './components/movies/Movies';
 import MoviesDetails from './components/movieDetails/MovieDetails';
 import Genres from './components/genres/Genres';
+import SingleGenre from './components/singleGenre/SingleGenre';
 import Support from './components/support/Support';
 import NotFoundPage from './components/notFoundPage/NotFoundPage';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:id" element={<MoviesDetails />} />
           <Route path="/genres" element={<Genres />} />
+          <Route path="/genres/:genreId" element={<SingleGenre />} />
           <Route path="/support" element={<Support />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

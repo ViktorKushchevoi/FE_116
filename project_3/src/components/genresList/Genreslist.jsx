@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../../assets/scss/_genres_list.scss';
 
 const baseURL = "https://api.themoviedb.org/3";
@@ -11,13 +11,14 @@ const imgBaseURL = "https://image.tmdb.org/t/p/original";
 function GenresList() {
     const [genres] = useState([
         { id: "12", title: "Adventure Movies" },
-        { id: "36", title: "History Movies" },
+        { id: "14", title: "Fantasy Movies" },
         { id: "27", title: "Horror Movies" },
         { id: "35", title: "Comedy Movies" }
     ]);
 
     const [error, setError] = useState(null);
     const [genreMovies, setGenreMovies] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchMovies = async (genreId) => {
@@ -42,6 +43,10 @@ function GenresList() {
         });
     }, [genres]);
 
+    const handleViewMore = (genreId) => {
+        navigate(`/genres/${genreId}`);
+    };
+
     if (error) {
         return (
             <div className="error">
@@ -60,10 +65,12 @@ function GenresList() {
                             <div key={index} className="movie">
                                 <Link to={"/movies/" + movie.id} className="link">
                                     <img src={imgBaseURL + movie.poster_path} alt={movie.title} />
+                                    <h2>{movie.title}</h2>
                                 </Link>
                             </div>
                         ))}
                     </div>
+                    <button onClick={() => handleViewMore(genre.id)}>View More</button>
                 </div>
             ))}
         </>
