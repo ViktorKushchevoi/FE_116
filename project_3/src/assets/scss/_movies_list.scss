@@ -3,11 +3,12 @@
     align-items: center;
     justify-content: flex-start;
     height: 100px;
-
+    margin: 50px 0;
     .form-items {
         display: flex;
         align-items: center;
         padding-left: 20px;
+
         input {
             width: 100%;
             display: flex;
@@ -26,7 +27,7 @@
             border-bottom-left-radius: 12px;
 
             &:focus {
-                outline: none; 
+                outline: none;
             }
         }
 
@@ -61,12 +62,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding-bottom: 50px;
 
     .movie {
         background: #1A1A1A;
         padding: 20px;
         border-radius: 12px;
         transition: background 0.3s ease-in-out;
+        position: relative;
 
         &:hover {
             background: #333;
@@ -101,6 +104,31 @@
                 font-style: normal;
                 font-weight: 500;
             }
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #262626;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            border-radius: 50%;
+            background: #0F0F0F;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                border: 1px solid white;
+            }
+        }
+
+        &:hover a {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
     }
 }

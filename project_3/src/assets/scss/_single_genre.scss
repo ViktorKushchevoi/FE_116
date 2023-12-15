@@ -9,12 +9,12 @@
         font-style: normal;
         font-weight: 700;
         line-height: 150%;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
 
     .genre-movies {
         display: grid;
-        grid-template-columns: repeat(5, 1fr); 
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
 
         .movie {
@@ -23,6 +23,8 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 100%;
+            padding: 20px;
 
             &:hover {
                 transform: scale(1.05);
@@ -52,7 +54,7 @@
                     left: 0;
                     width: 100%;
                     margin: 0;
-                    padding: 10px;
+                    padding: 15px;
                     background-color: rgba(0, 0, 0, 0.7);
                     color: #FFF;
                     font-family: 'Manrope', sans-serif;
@@ -67,6 +69,21 @@
                     transform: translateY(0);
                     background-color: rgba(0, 0, 0, 0.8);
                 }
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                background: #0F0F0F;
+                border: 2px solid white;
+                opacity: 1;
             }
         }
     }

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MainMenu from '../mainMenu/mainMenu';
 import logo1 from '../../assets/img/logo1.png';
 import '../../assets/scss/_header.scss';
@@ -11,9 +12,9 @@ function Header() {
                 <NavLink to="/"><img src={logo1} alt="logo1" /></NavLink>
                 <MainMenu />
                 <div className={'btn'}>
-                    <a href="/">
-                        <button>Subscribe</button>
-                    </a>
+                    <Link to="wishlist">
+                        <button>Wish List</button>
+                    </Link>
                 </div>
             </div>
         </header>

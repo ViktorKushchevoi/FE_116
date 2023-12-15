@@ -1,6 +1,6 @@
 import MoviesList from '../moviesList/Movieslist';
 import MainSlider from '../mainSlider/MainSlider';
-import '../../assets/scss/movies.scss';
+
 function Movies() {
     return (
         <>

@@ -13,36 +13,24 @@ function Footer() {
                     <div className="column">
                         <ul>
                             <li><NavLink to="/" className="footer-title">Home</NavLink></li>
-                            <li><NavLink to="/">Categories</NavLink></li>
-                            <li><NavLink to="/">Pricing</NavLink></li>
-                            <li><NavLink to="/">Page title</NavLink></li>
                         </ul>
                     </div>
                     <div className="column">
                         <ul>
                             <li><NavLink to="/movies" className="footer-title">Movies</NavLink></li>
-                            <li><NavLink to="/">Gernes</NavLink></li>
-                            <li><NavLink to="/">Trending</NavLink></li>
-                            <li><NavLink to="/">Popular</NavLink></li>
                         </ul>
                     </div>
                     <div className="column">
                         <ul>
                             <li><NavLink to="/genres" className="footer-title">Genres</NavLink></li>
-                            <li><NavLink to="/">Comedy</NavLink></li>
-                            <li><NavLink to="/">Adventure</NavLink></li>
-                            <li><NavLink to="/">Horror</NavLink></li>
-                            <li><NavLink to="/">History</NavLink></li>
                         </ul>
                     </div>
                     <div className="column">
                         <ul>
                             <li><NavLink to="/support" className="footer-title">Support</NavLink></li>
-                            <li><NavLink to="/">Contact us</NavLink></li>
                         </ul>
                     </div>
                     <div className="conect">
-                        <h4>Subscribe to Newsletter</h4>
                         <div className="icons">
                             <NavLink to="/"><img src={fbicon} alt="logo" /></NavLink>
                             <NavLink to="/"><img src={twicon} alt="logo" /></NavLink>

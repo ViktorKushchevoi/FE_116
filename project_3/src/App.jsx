@@ -9,6 +9,7 @@ import Genres from './components/genres/Genres';
 import SingleGenre from './components/singleGenre/SingleGenre';
 import Support from './components/support/Support';
 import NotFoundPage from './components/notFoundPage/NotFoundPage';
+import WishListPage from './components/wishListPage/WishListPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/genres/:genreId" element={<SingleGenre />} />
           <Route path="/support" element={<Support />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/wishlist" element={<WishListPage />} />
         </Route>
       </Route>
     </Routes>

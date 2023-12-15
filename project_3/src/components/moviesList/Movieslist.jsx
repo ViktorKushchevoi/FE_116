@@ -3,7 +3,8 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../assets/scss/_movies_list.scss';
-
+import like from "../../assets/img/like.svg";
+import dislike from "../../assets/img/dislike.svg";
 const baseURL = "https://api.themoviedb.org/3";
 const apiKey = "dd365cece93903f23fd8f02821fb9210";
 const allMovies = "/discover/movie";
@@ -14,6 +15,17 @@ function MoviesList() {
   const [movies, setMovies] = useState(null);
   const [search, setSearch] = useState('');
   const [error, setError] = useState(null);
+  const [liked, setLiked] = useState(() => {
+    let items = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      if (!key.indexOf('movie-')) {
+        items.push(Number(localStorage.getItem(key)));
+      }
+    }
+    return items;
+  })
+
 
   function searchMovie(e) {
     e.preventDefault();
@@ -45,9 +57,24 @@ function MoviesList() {
       })
   }
 
+  const setWishList = (event) => {
+    event.preventDefault();
+    let id = Number(event.target.attributes.getNamedItem('data-id').value);
+    let isFavourited = liked.includes(id)
+    if (!isFavourited) {
+      let newItem = [...liked, id]
+      setLiked(newItem);
+      window.localStorage.setItem('movie-' + id, id);
+    } else {
+      let newItem = liked.filter((savedId) => savedId !== id)
+      setLiked(newItem);
+      window.localStorage.removeItem('movie-' + id, id)
+    }
+  }
+
   useEffect(() => {
     getMovies(search);
-  }, [search]); 
+  }, [search]);
 
   if (error) {
     return <div className="error">
@@ -63,6 +90,9 @@ function MoviesList() {
             <h5>{movie.vote_average}</h5>
           </div>
         </Link>
+        <div className={liked.includes(movie.id) ? 'icon dislike' : 'icon like'}>
+          <img onClick={setWishList} data-id={movie.id} src={liked.includes(movie.id) ? like : dislike} alt="" />
+        </div>
       </div>
     ));
     return (

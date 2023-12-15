@@ -43,9 +43,10 @@ function MovieDetails() {
                 <h2>{movie.title}</h2>
                 <div className="movie-container">
                     <img className="movie-poster" src={imgBaseURL + movie.backdrop_path} alt="moviedetails" />
-                    <button className="button">Watch now</button>
+                    <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noopener noreferrer">
+                        <button className="button">Watch Now</button>
+                    </a>
                 </div>
-
                 <div className="movie-info">
                     <div className="description">
                         <h5>Description</h5>

@@ -34,7 +34,7 @@ function MainSlider() {
         </div>;
     }
     else if (movies) {
-        const items = movies.slice(0, 13).map((movie, index) => (
+        const items = movies.slice(0, 8).map((movie, index) => (
             <SwiperSlide key={index}>
                 <Link to={"/movies/" + movie.id} className="link">
                     <div className="movie-slide">
