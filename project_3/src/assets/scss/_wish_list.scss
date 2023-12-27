@@ -1,6 +1,6 @@
 .wishlist {
     display: grid;
-    gap: 30px;
+    gap: 50px;
     grid-template-rows: repeat(4, auto);
     padding: 50px 0;
 
@@ -8,6 +8,9 @@
         display: grid;
         grid-template-columns: 1fr 1.3fr;
         gap: 20px;
+        padding: 20px;
+        position: relative;
+
         a {
             text-decoration: none;
 
@@ -38,7 +41,7 @@
                 line-height: 150%;
             }
 
-            .description { 
+            .description {
                 p {
                     color: var(--Absolute-White, #FFF);
                     font-family: Manrope;
@@ -48,6 +51,21 @@
                     line-height: 150%;
                 }
             }
+        }
+
+        .dislike-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #262626;
+            position: absolute;
+            border-radius: 50%;
+            background: #0F0F0F;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+
         }
     }
 }
