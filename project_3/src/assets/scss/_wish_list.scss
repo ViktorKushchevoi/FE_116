@@ -1,7 +1,6 @@
 .wishlist {
     display: grid;
     gap: 50px;
-    grid-template-rows: repeat(4, auto);
     padding: 50px 0;
 
     .movie {
@@ -67,6 +66,7 @@
             transition: opacity 0.3s ease-in-out;
 
         }
+
     }
 }
 
@@ -79,4 +79,12 @@ h1 {
     font-weight: 700;
     line-height: 150%;
     padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .wishlist {
+        .movie {
+            grid-template-columns: 1fr;
+        }
+    }
 }

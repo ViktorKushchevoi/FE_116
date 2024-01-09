@@ -5,16 +5,17 @@ import '../../assets/scss/_movie_details.scss';
 const baseURL = "https://api.themoviedb.org/3";
 const apiKey = "dd365cece93903f23fd8f02821fb9210";
 const movieUrl = "/movie/";
+const videoUrlPrefix = '/videos';
 const imgBaseURL = "https://image.tmdb.org/t/p/original";
+const youtubeVideoUrl = 'https://www.youtube.com/watch?v='
 
 function MovieDetails() {
-
     const movieId = useParams().id;
     const [movie, setMovie] = useState(null);
     const [error, setError] = useState(null);
+    const [videoUrl, setVideoUrl] = useState('')
 
-    async function fetchData(id) {
-
+    function fetchData(id) {
         axios.get(baseURL + movieUrl + id, {
             params: {
                 api_key: apiKey
@@ -26,7 +27,22 @@ function MovieDetails() {
             .catch(error => {
                 setError(error.message)
             })
+
+        axios.get(baseURL + movieUrl + id + videoUrlPrefix, {
+            params: {
+                api_key: apiKey
+            }
+        })
+            .then(res => {
+                const firstTrailer = res.data.results.find(item => item.type === "Trailer")
+
+                setVideoUrl(youtubeVideoUrl + firstTrailer.key)
+            })
+            .catch((error) => {
+                setError(error.message)
+            })
     }
+
 
     useEffect(() => {
         fetchData(movieId)
@@ -43,7 +59,7 @@ function MovieDetails() {
                 <h2>{movie.title}</h2>
                 <div className="movie-container">
                     <img className="movie-poster" src={imgBaseURL + movie.backdrop_path} alt="moviedetails" />
-                    <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noopener noreferrer">
+                    <a href={videoUrl} target="_blank" rel="noopener noreferrer">
                         <button className="button">Watch Now</button>
                     </a>
                 </div>

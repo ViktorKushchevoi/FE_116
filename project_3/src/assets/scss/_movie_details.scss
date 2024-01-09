@@ -109,3 +109,13 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .movie-details {
+        .movie-info{
+            flex-direction: column;
+            .description, .extra-info {
+                width: 100%;
+            }    
+        }
+    }
+}

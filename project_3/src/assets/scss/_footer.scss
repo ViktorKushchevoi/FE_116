@@ -1,14 +1,15 @@
-
 footer {
     background: #0F0F0F;
 
     .footer-wrapper {
         padding-top: 50px;
+
         .main-info {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-bottom: 50px;
+
             .column {
                 ul {
                     display: flex;
@@ -77,4 +78,27 @@ footer {
             }
         }
     }
+
+
+}
+
+@media (max-width: 768px) {
+    footer {
+        .footer-wrapper {
+            padding-top: 20px;
+            .main-info {
+                flex-direction: column;
+                padding-bottom: 20px;
+
+                .conect {
+                    padding-top: 20px;
+
+                }
+            }
+            .rights {
+                justify-content: center;
+            }
+        }
+    }
+
 }
