@@ -1,0 +1,121 @@
+.movie-details {
+    padding: 50px 0;
+    .movie-container {
+        position: relative;
+
+        .movie-poster {
+            width: 100%;
+            object-fit: cover;
+            height: 600px;
+            transition: box-shadow 0.3s ease-in-out;
+            border-radius: 20px;
+            &:hover {
+                box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        button {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            border-radius: 8px;
+            background: #E50000;
+            padding: 18px 24px;
+            border: unset;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+
+            &:hover {
+                background: #990000;
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 58px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+
+    h5 {
+        color: #999;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    p {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        text-align: justify;
+    }
+
+    .movie-info {
+        display: flex;
+        gap: 20px;
+        margin-top: 70px;
+
+        .description,
+        .extra-info {
+            border: 1px solid #262626;
+            background: #1A1A1A;
+            padding: 50px;
+            border-radius: 12px;
+        }
+
+        .description {
+            display: flex;
+            align-self: flex-start;
+            flex-direction: column;
+            gap: 14px;
+            width: 60%;
+        }
+
+        .extra-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 40%;
+
+            .info-item {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .extra-info-title {
+                display: flex;
+                gap: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .movie-details {
+        .movie-info{
+            flex-direction: column;
+            .description, .extra-info {
+                width: 100%;
+            }    
+        }
+    }
+}

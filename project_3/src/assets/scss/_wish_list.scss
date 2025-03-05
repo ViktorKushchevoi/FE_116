@@ -1,0 +1,90 @@
+.wishlist {
+    display: grid;
+    gap: 50px;
+    padding: 50px 0;
+
+    .movie {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 20px;
+        padding: 20px;
+        position: relative;
+
+        a {
+            text-decoration: none;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        .movie-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--Black-15, #262626);
+            background: var(--Black-10, #1A1A1A);
+            padding: 50px;
+
+            h2 {
+                color: var(--Absolute-White, #FFF);
+                text-align: center;
+                font-family: Manrope;
+                font-size: 38px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 150%;
+            }
+
+            .description {
+                p {
+                    color: var(--Absolute-White, #FFF);
+                    font-family: Manrope;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        .dislike-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #262626;
+            position: absolute;
+            border-radius: 50%;
+            background: #0F0F0F;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+
+        }
+
+    }
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .wishlist {
+        .movie {
+            grid-template-columns: 1fr;
+        }
+    }
+}

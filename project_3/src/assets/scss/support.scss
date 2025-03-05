@@ -1,0 +1,51 @@
+.support-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 50px 0;
+
+    .left-side {
+        h1 {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        p {
+            color: #999;
+            font-family: Manrope;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            margin: 15px 0 30px 0;
+        }
+
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+
+    }
+}
+
+@media (max-width: 1170px) {
+    .support-form {
+        display: flex;
+        flex-direction: column;
+
+        .left-side {
+            margin: 0 auto;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}
